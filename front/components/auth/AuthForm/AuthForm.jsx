@@ -27,7 +27,7 @@ const AuthForm = () => {
 
         try {
             await axios.post(
-                `${BACKEND_URL}/auth/login`,
+                `${BACKEND_URL}auth/login`,
                 { username, password }, 
                 {
                     headers: { "Content-Type": "application/json" },
