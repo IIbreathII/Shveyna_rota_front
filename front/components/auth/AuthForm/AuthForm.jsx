@@ -11,11 +11,11 @@ const AuthForm = () => {
     const router = useRouter();
 
     // Явно указываем ссылку на бэкенд (NestJS)
-    const BACKEND_URL = "http://localhost:3007"; // Измени на свой адрес
+    const BACKEND_URL = process.env.NEXT_PUBLIC_BACK_URL1; // Измени на свой адрес
 
     // Авторизация через Google
     const Google = () => {
-        router.push(`${BACKEND_URL}/auth/google`);
+        router.push(`${BACKEND_URL}auth/google`);
     };
 
     // Авторизация через базу данных
