@@ -1,0 +1,19 @@
+.menu-button {
+	position: fixed;
+	z-index: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 20px;
+	right: 20px;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	font-size: 48px;
+	background-color: #2e2e35;
+	color: #E8DCD0;
+	font-family: 'intro', sans-serif;
+}

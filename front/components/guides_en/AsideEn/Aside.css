@@ -1,0 +1,51 @@
+/* Основные стили */
+.aside {
+  background-color: #2e2e35;
+  width: 300px;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding-top: 102px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  z-index: 5;
+}
+
+/* Контейнер с прокруткой */
+.aside-content {
+  padding-top: 5%;
+  padding-left: 5%;
+  max-height: calc(100vh - 140px);
+  width: calc(100% - 12px); /* Уменьшаем ширину, чтобы оставить место для скролла */
+  overflow-y: auto;
+  position: relative;
+  scrollbar-gutter: stable both-edges; /* Создаём отступы, если поддерживается браузером */
+}
+
+/* Стилизация скроллбара */
+.aside-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.aside-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.aside-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Скрытие aside при закрытии */
+.aside.closed {
+  transform: translateX(-100%);
+}
+
+/* Сдвиг контента при раскрытии */
+body.expanded .main-content {
+  margin-left: 275px;
+}

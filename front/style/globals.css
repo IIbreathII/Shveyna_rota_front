@@ -1,0 +1,257 @@
+/* Сброс всех отступов и границ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* Убираем стандартный стиль для ссылок, фокуса и активных состояний */
+:focus,
+:active,
+a:focus,
+a:active {
+  outline: none;
+}
+
+/* Сброс базовых стилей для html и body */
+html,
+body {
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* Базовый шрифт для всего документа */
+  font-size: 100%;
+  /* Включаем наследование шрифта */
+  line-height: 1.4;
+  /* Удобная высота строки для текста */
+  -webkit-font-smoothing: antialiased;
+  /* Для улучшения рендеринга шрифтов */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Сброс стилей для форм */
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  outline: none;
+  background: transparent;
+  appearance: none;
+  /* Упрощенный сброс */
+}
+
+/* Сброс стилей для ссылок */
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Убираем стандартные маркеры у списка */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 0;
+}
+
+/* Сброс стилей для изображений */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+
+
+/* Сброс стилей для заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Убираем стандартные стили для таблиц */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+th,
+td {
+  padding: 0;
+  border: 1px solid #ddd;
+  /* Легкий бордер для таблиц */
+}
+
+/* Общий сброс для форм */
+form {
+  margin: 0;
+  padding: 0;
+}
+
+/* Убираем стандартные стили для кнопок */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+}
+
+/* Убираем дефолтное поведение для внутренних объектов */
+iframe,
+object,
+embed {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Убираем дефолтное поведение для элементов форм */
+select,
+option {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+body {
+  padding: 75px 0px 0px 0px;
+}
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  background-color: #e8dcd0;
+}
+
+.menu-active {
+  overflow-y: hidden;
+}
+
+._main-title {
+  text-align: center;
+  font-size: 28px;
+  font-family: intro, sans-serif;
+  color: #2e2e35;
+}
+
+._background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("/images/footer/bg.png");
+  background-size: cover;
+  margin: 0px 0px -85px 0px;
+  width: 100%;
+  height: 100%;
+}
+
+._background::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2e2e3575;
+}
+
+@media (max-width: 678px) {
+  ._main-title {
+    font-size: 24px;
+  }
+}
+
+
+@font-face {
+  font-family: 'intro';
+  src: url('../fonts/intro.woff2') format('woff2'),
+    url('../fonts/intro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'unbounded';
+  src: url('../fonts/unbounded.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'anonymousprobold';
+  src: url('../fonts/anonymousprobold.woff2') format('woff2'),
+    url('../fonts/anonymousprobold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Для лучшего поведения на мобильных устройствах */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    /* Уменьшаем размер шрифта на мобильных устройствах */
+  }
+}
+
+.spinner-border {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  vertical-align: text-bottom;
+  border: 0.25em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+  position: absolute;
+  top: calc(50% - 2.5rem);
+  left: calc(50% - 2.5rem);
+}
+
+@keyframes spinner-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

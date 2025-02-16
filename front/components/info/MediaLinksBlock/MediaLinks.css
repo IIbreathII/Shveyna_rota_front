@@ -1,0 +1,42 @@
+.media-links {
+	background-color: #2e2e35;
+}
+
+.media-links__title {
+	padding: 0px 0px 30px 0px;
+	background-color: #e8dcd0;
+}
+
+.media-links__container {
+	max-width: 1100px;
+	padding: 0px 15px;
+	margin: 0 auto;
+}
+
+.media-links__block {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.media-links__link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	padding: 70px 20px;
+	flex: 1 1 10%;
+	font-size: 22px;
+	color: #ebddd0;
+	font-family: 'anonymousprobold', sans-serif;
+	transition: all 0.3s ease 0s;
+}
+
+.media-links__image img {
+	max-width: 50px;
+}
+
+.media-links__link:hover {
+	background-color: #1e1e1f44;
+}

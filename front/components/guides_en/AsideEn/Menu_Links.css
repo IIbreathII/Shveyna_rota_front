@@ -1,0 +1,71 @@
+/* Menu_Links.css */
+
+/* Стили для ссылок меню */
+.spoller__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e8dcd0;
+  font-family: 'anonymousprobold', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 13px;
+  padding: 10px 22px;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform: translateX(0);
+  min-width: max-content; /* предотвращает сжатие текста */
+  white-space: nowrap;
+}
+
+/* Псевдоэлемент "точка" */
+.spoller__link::before {
+  content: "";
+  width: 10px;
+  height: 9px;
+  background-color: rgb(82, 223, 129);
+  border-radius: 50%;
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+}
+
+/* Изменение цвета при наведении */
+.spoller__link:hover {
+  color: rgb(82, 223, 129);
+}
+
+/* Для неактивных ссылок при hover сдвигаем их вправо и показываем точку */
+.spoller__link:not(.active):hover {
+  transform: translateX(5px);
+}
+.spoller__link:not(.active):hover::before {
+  opacity: 1;
+}
+
+/* Активная ссылка (текущая страница) */
+.spoller__link.active {
+  transform: translateX(0);
+  color: #00ff66 !important;
+}
+.spoller__link.active::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+.spoller__link.active:hover {
+  transform: translateX(5px);
+}
+
+/* Индикатор активной ссылки (если требуется) */
+.indicator {
+  display: none;
+}
+
+/* Правило, скрывающее точку у активной ссылки, если над какой-либо неактивной ссылкой в меню находится курсор.
+   Родительскому элементу (aside) динамически добавляется класс "nonActiveHovered", чтобы это правило сработало: */
+.aside.nonActiveHovered .spoller__link.active:not(:hover)::before {
+  opacity: 0;
+}

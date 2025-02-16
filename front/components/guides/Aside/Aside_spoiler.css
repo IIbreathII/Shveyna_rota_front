@@ -1,0 +1,30 @@
+/* Спойлер */
+.spoller__title {
+	cursor: pointer;
+	font-size: 20px;
+	color: #e8dcd0;
+	font-family: 'intro', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.spoller__button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	position: relative;
+	padding-right: 30px;
+}
+
+.spoller__body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: 20px;
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s ease;
+}

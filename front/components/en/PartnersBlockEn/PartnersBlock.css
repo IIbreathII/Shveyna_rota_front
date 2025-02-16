@@ -1,0 +1,42 @@
+.partners {
+	background: #ebddd0;
+	position: relative;
+	z-index: 2;
+	border-bottom: 12px solid #2e2e35;
+	box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.562);
+}
+
+.partners__wrapper {
+	background-color: #2e2e35;
+}
+
+.partners__box {
+	position: relative;
+}
+
+.partners__container {
+	max-width: 1200px;
+	padding: 55px 15px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.partners__partner img {
+	max-height: 130px;
+	max-width: 200px;
+}
+
+.partners__title {
+	color: #ebddd0;
+	padding: 20px 0px 0px 0px;
+	background-color: #2e2e35;
+	border-top: 12px solid #2e2e35;
+}
+
+.partners__slide {
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}

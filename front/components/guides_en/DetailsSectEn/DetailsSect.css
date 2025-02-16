@@ -1,0 +1,48 @@
+.details {
+    margin: 0px 0px 40px 0px;
+    text-align: center; /* Центрируем весь контент */
+  }
+  
+  .details__container {
+    background-color: #E8DCD0; /* Фон контейнера */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 2px; /* Округление углов */
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.63);
+    border: 1px solid rgb(117, 117, 117);
+    width: 100%; /* Контейнер на всю ширину */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрируем */
+    margin-top: 30px; /* Отступ сверху */
+    text-align: left; /* Выравниваем текст контейнера влево */
+  }
+  
+  .details h2 {
+    font-size: 23px;
+    background-color: #2e2e35;
+    color: #E8DCD0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем текст внутри */
+    width: 450px; /* Фон не слишком широкий */
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .details p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+  
+  @media (max-width: 900px) {
+    .details__container {
+      padding: 15px;
+    }
+    .details h2 {
+      width: 100%; /* Заголовок занимает всю ширину контейнера */
+    }
+  }
+  

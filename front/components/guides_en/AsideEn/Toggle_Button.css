@@ -1,0 +1,45 @@
+/* Кнопка скрытия/открытия панели */
+.toggle-button {
+  position: absolute;
+  top: 50%; 
+  right: -32px; /* Увеличиваем отступ, чтобы кнопка явно выступала */
+  transform: translateY(-50%);
+  background-color: #2e2e35; /* Изменён фон, чтобы отличался от aside */
+  border: none;
+  width: 32px;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  z-index: 9999 !important; /* Кнопка поверх всех элементов */
+}
+
+/* Стили для кнопки, когда aside закрыт */
+.aside.closed .toggle-button {
+  right: -32px;
+}
+
+/* Иконка кнопки */
+.toggle-icon {
+  width: 42%;
+  height: 42%;
+  background-image: url("/images/pointer.png"); /* Проверьте, что путь корректный */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+/* Поворот иконки (например, когда панель свернута) */
+.toggle-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Ховер-эффект для кнопки */
+@media (hover: hover) {
+  .toggle-button:hover {
+    background-color: #46464d;
+  }
+}

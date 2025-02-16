@@ -1,0 +1,30 @@
+{
+  "name": "front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "framer-motion": "^11.15.0",
+    "jose": "^5.9.6",
+    "js-cookie": "^3.0.5",
+    "leaflet": "^1.9.4",
+    "next": "15.0.4",
+    "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
+    "react-dom": "^19.0.0",
+    "react-leaflet": "^5.0.0",
+    "swiper": "^11.1.15"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "15.0.4"
+  }
+}

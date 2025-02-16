@@ -1,0 +1,111 @@
+.conboxcontainer {
+    height: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 70px 0px;
+}
+
+.conboxcontainer .conbox {
+    height: 100%;
+    max-width: 1200px;
+    padding: 0px 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.conbox .left, .conbox .right1 {
+    height: 100%;
+    width: 49.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #2e2e35;
+    font-size: 32px;
+    text-align: center;
+    transition: background 0.8s ease, opacity 0.8s ease;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.42);
+    overflow: hidden;
+    background-color: #e8dcd0a2;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (hover: hover) {
+    .conbox .left:hover {
+        background: url('/images/conblock/bg2.jpg') center center no-repeat;
+        background-size: 110% 110%;
+        opacity: 2;
+    }
+
+    .conbox .right1:hover {
+        background: url('/images/conblock/bg1.jpg') center center no-repeat;
+        background-size: 110% 110%;
+        opacity: 2;
+    }
+}
+
+.conbox .left::before, .conbox .right1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #E8DCD0;
+    pointer-events: none;
+    opacity: 2;
+    transition: opacity 0.8s ease;
+}
+
+.conbox .left:hover::before, .conbox .right1:hover::before {
+    opacity: 0.6;
+}
+
+.conbox .right1 span, .conbox .left h1 {
+    position: relative;
+    max-width: 394px !important;
+    z-index: 1;
+}
+
+.conbox .left h1 {
+    max-width: 394px !important;
+    font-size: 32px;
+    color: #2e2e35;
+    font-family: 'intro', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+@media (max-width: 768.03px) {
+    .conboxcontainer {
+        height: 400px;
+    }
+}
+
+@media (max-width: 676px) {
+    .conbox {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .conbox .right1, .conbox .left {
+        width: 100%;
+        height: auto;
+    }
+    .conbox .right1 span, .conbox .left h1 {
+        font-size: 24px;
+        max-width: none;
+        width: 100%;
+        padding: 40px 20px;
+    }
+    .conboxcontainer {
+        height: auto;
+        padding: 0 10px;
+    }
+}

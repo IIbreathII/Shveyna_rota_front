@@ -1,0 +1,75 @@
+
+.spoller__button {
+	display: flex;
+	flex-direction: row; 
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+
+
+.spoller__icon {
+    margin-left: 10px;
+}
+
+.spoller__icon img {
+    max-width: 23px;
+    transition: transform 0.3s ease;
+}
+
+.spoller__body {
+	display: flex;
+	flex-direction: column; /* Размещает элементы в колонку */
+	align-items: flex-start; /* Выравнивает элементы по левому краю */
+	padding-left: 20px; /* Отодвигает их от левого края */
+	overflow: hidden;
+	height: 0;
+	transition: height 0.5s ease;
+}
+
+
+
+.spoller__link {
+    font-size: 16px;
+    color: #e8dcd0;
+    font-family: 'anonymousprobold', sans-serif;
+    line-height: 1.5;
+    display: block;
+		padding-left: 22px;
+		
+	}
+
+.spoller-active .spoller__icon img {
+    transform: rotate(180deg);
+}
+
+.spoller__button {
+	padding-left: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 15px;
+	padding-right: 30px;
+	background-color: #2e2e35;
+	box-shadow: 0px 0px 13.12px 2.88px rgba(0, 0, 0, 0.35);
+	
+	
+	
+}
+
+.spoller__link.active {
+	color: #00ff66 !important; /* Принудительно задаем цвет */
+}
+
+.spoller__title.active-category {
+  color:  #00ff66; /* Подсветка активной категории зелёным цветом */
+ 
+}
+
+.spoller-active .spoller__body {
+  height: auto; /* Открытие активной категории */
+}

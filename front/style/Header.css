@@ -1,0 +1,262 @@
+.header {
+	position: fixed;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	background: #2e2e35;
+	height: 75px;
+	width: 100%;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.header__container {
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	padding: 0px 15px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.header .left {
+	height: 100%;
+	display: flex;
+	align-items: center; 
+	justify-content: center;
+
+}
+
+.header__link {
+	position: relative;
+	z-index: 6;
+	color: #E8DCD0;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 32px;
+	font-family: "Neucha", serif;
+}
+
+.header .right {
+	display: flex;
+}
+
+.left .logo_shveya .logo-img {
+	max-width: 100% !important;
+}
+
+.logo_shveya {
+	max-width: 196px;
+}
+
+.right .menu {
+	display: flex;
+	gap: 30px;
+}
+
+.right .menulang {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	margin: 0px 0px 0px 30px;
+}
+
+.menulang {
+	position: relative;
+}
+
+.menulang button {
+	transition: all 0.3s ease 0s;
+}
+
+.menulang button:hover {
+	color: rgb(82, 223, 129);
+}
+
+._line {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	top: 0;
+	height: 100%;
+	width: 2px;
+	background-color: #E8DCD0;
+}
+
+.menu .menu__link, button {
+	font-size: 18px; 
+	font-family: 'intro', sans-serif; 
+	color: #E8DCD0;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column; 
+	align-items: center; 
+	justify-content: center; 
+	height: 100%; 
+	transition: all 0.3s ease;
+	user-select: none;
+}
+
+.menu .menu__link:hover {
+	color: rgb(82, 223, 129);
+}
+
+.menu__link {
+	position: relative;
+}
+
+.menu__link::after {
+	content: '';
+	width: 12px;
+	height: 12px;
+	background-color: rgb(82, 223, 129);
+	border-radius: 50%;
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	opacity: 0;
+	transition: all 0.3s ease 0s;
+}
+
+.menu__link:hover.menu__link::after {
+	opacity: 1;
+	bottom: -13px;
+}
+
+.link-active.menu__link::after {
+	opacity: 1;
+	bottom: -13px;
+}
+
+
+
+.menu .menu__link.active::after {
+	opacity: 1;  
+}
+
+.icon-menu {
+	display: none;
+	position: relative;
+	z-index: 6;
+	height: 30px;
+}
+
+.icon-menu span {
+	display: block;
+	width: 40px;
+	height: 4px;
+	background-color: #E8DCD0;
+}
+
+.icon-menu::after, .icon-menu::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 4px;
+	background-color: #E8DCD0;
+	left: 0;
+	transition: all 0.3s ease 0s;
+}
+
+.icon-menu::after {
+	bottom: 0;
+}
+
+.icon-menu::before {
+	top: 0;
+}
+
+.btn-active span {
+	opacity: 0;
+}
+
+.btn-active::after {
+	top: 50%;
+	transform: translate(0, -50%) rotate(-45deg);
+}
+
+.btn-active::before {
+	top: 50%;
+	transform: translate(0, -50%) rotate(45deg);
+
+}
+
+.extra-button {
+	display: none; /* По умолчанию скрыта */
+	width: 40px;
+	height: 40px;
+	background-image: url('/front/public/images/pointer.png'); /* Путь к картинке */
+	background-size: contain; /* Подгоняем картинку под размер кнопки */
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+@media (max-width: 992px) {
+	.header {
+		height: 80px;
+	}
+	.menu .menu__link, button {
+		font-size: 18px;
+	}
+	.logo_shveya {
+		max-width: 146px;
+	}
+	
+}
+
+
+
+@media (max-width: 950px) {
+	.icon-menu {
+		display: block;
+	}
+	.right .menu {
+		flex-direction: column;
+	}
+	.menu .menu__link, button {
+		font-size: 24px;
+	}
+	._menu {
+		position: absolute;
+		z-index: 5;
+		top: 0;
+		left: 100%;
+		height: 100vh;
+		width: 100vw;
+		background-color: #2e2e35fb;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		transition: all 0.3s ease 0s;
+	}
+	.right .menulang  {
+		margin: 0;
+	}
+
+	body.guides-page .extra-button {
+		display: flex;
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+}
+
+	
+}
+
+.active {
+	left: 0;
+}
+
+.link-active {
+	color: rgb(82, 223, 129) !important;
+}
